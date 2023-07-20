@@ -237,8 +237,9 @@ function btnKeyClick(id) {
 
 document.addEventListener('keydown', (event) => {
     let name = event.key;
+    let keycode = event.keyCode;
     btnKeyClick(name.toUpperCase());
-    if (name == "Enter") {
+    if (name == "Enter" || keycode == 32) {
         if (document.getElementById("enter")) {
             onloadSite();
         }
